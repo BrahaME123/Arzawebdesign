@@ -547,6 +547,9 @@ header{
     .hero-text p{
         padding: 1.5rem;
     }
+    .adicion-imagen {
+        display: none;
+    }
 
 
 
