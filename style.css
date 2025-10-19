@@ -489,11 +489,34 @@ header{
     font-size: 1rem;
 
 }
+
+.plan-card button:hover{
+    background-color: #29a0af;
+    color: #000;
+}
+
 .plan-card a{
     text-decoration: none;
-    color: #29a0af;
+    color: #000000;
     width: 100%;
     height: 100%;
+}
+
+.footer{ 
+    background:#242424;
+    padding:1rem 0;
+    color:#777777}
+.footer-inner{
+    text-decoration: none;
+     color: white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem}
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
 }
 
 
