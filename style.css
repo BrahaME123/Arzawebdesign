@@ -601,6 +601,11 @@ header{
   .footer-inner a{
     padding: 10px;
   }
+  .socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
 
 }
