@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ledger&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #30e6ec;
+    --color-secondary: #33d8ee;
+    --color-accent: #29a0af;
+    --color-background: #ffffff;
+    --color-text: #ffffff;
+    --color-light: #4f415f;
+    --color-dark: #34495e;
+
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    
+    --font-size-h1: 2.5rem;
+    --font-size-h3: 1.75rem; 
+    --font-size-h4: 1.5rem; 
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;  
+    --font-size-body: 1rem; 
+    --font-size-small: 0.875rem;
+    
+    --line-height: 1.6;
+    --spacing-unit: 16px; 
+
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: rgb(0, 0, 0);
+    font-family: 'Inter','Roboto','Verdana';
+    
+}
+
+
+
+::-webkit-scrollbar{
+  display: none;
+  color: transparent;  
+}
+::-webkit-scrollbar-track{
+  background-color: transparent;
+  color: transparent;
+  
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.75rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 1rem;
+
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color:#000000;
+    z-index: 60;
+
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-thumb{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    opacity:0.95
+}
+.brand-text{
+    font-weight: 300;
+    color: var(--color-secondary);
+    letter-spacing: 0.4px;
+
+}
+
+.nav{
+    display: flex;
+    gap: 3rem;
+}
+.nav a{
+    text-decoration: none;
+    color: var(--color-background);
+    font-weight: 300;
+    padding: 1.5rem 0;
+    transition: color 0.3s ease;
+
+
+}
+
+.nav a:hover{
+    color: #30e6ec;
+}
+.menu-btn{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/*style="background-image:url('/assets/imgs/ChatGPT\ Image\ 18\ oct\ 2025\,\ 08_57_07\ p.m..png')"   esto en hero puede servir.*/
+.hero{
+    height: 100vh;
+    display: flex;
+    letter-spacing: 3px;
+    align-items: center;
+    justify-content:center;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+
+}
+
+.hero-inner{
+    display: flex;
+    flex-direction: row;
+    
+}
+.hero img{
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+}
+.hero-inner .hero-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    justify-content: center;
+    color: rgb(255, 252, 252);
+    transition: color 1s ease;
+
+    
+}
+
+.hero-text p{
+    padding: 1rem;
+}
+.hero-inner button{
+    padding: 0.7rem;
+    margin-top: 1rem;
+    width: 120px;
+    text-decoration: none;
+    background-color:#299faf4b;
+    
+    border:none;
+    transition: color 1s ease;
+    
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1rem;
+
+}
+.hero-inner a{
+    text-decoration: none;
+    color: #29a0af;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-inner button:hover {
+    background-color: #29a0af;
+    color: white;
+}
+.hero-inner a:hover{
+    color: rgb(0, 0, 0);
+}
+.hero h1{
+    font-weight: 200;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+}
+.informacion{
+   
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px;
+    margin: 0 auto;
+}
+.informacion-texto{
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+.informacion-texto h2{
+    color: #8dfbff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
+.informacion-texto p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: white;
+}
+.informacion-imagen{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.informacion-imagen img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.adicion{
+    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 60px 40px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.adicion-texto{
+      flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+.adicion-texto h2{
+    color: #8dfbff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.adicion-texto p{
+    margin-top: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: white;
+}
+.adicion-imagen{
+    flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.adicion-imagen img{
+    max-width: 80%;
+  height: auto;
+  border-radius: 3px;
+  background: #30e6ec;
+}
+
+.boxes{
+     background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 100px 20px; /* Reemplaza height fija */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 0; /* Evita doble espacio */
+}
+
+.boxes h3{
+    font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.boxes h4{
+   font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+
+}
+.boxes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boxes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nosotros-item {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 2rem;
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nosotros-item:hover {
+  transform: translateY(-5px);
+  background-color: #1a1a1a;
+}
+
+
+.nosotros-item p{
+    padding: 3rem;
+}
+
+.portfolio{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.portfolio h3{
+    font-size: 2rem;
+    font-weight:200;
+    padding: 3rem;
+    color: #000000;
+    letter-spacing: 4px;
+}
+.portfolio-grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.project{
+    flex:1;
+}
+.project img{
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    height: auto;
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.project h4{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+.project p{
+    padding: 2rem;
+}
+.overlay-text{
+    opacity: 0;
+
+}
+
+.proyecto{
+   
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px;
+    margin: 0 auto;
+    
+}
+.proyecto-texto{
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+.proyecto-texto h2{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+.proyecto-texto a{
+    text-decoration: none;
+    color: #29a0af;
+
+}
+.proyecto-texto p{
+    margin-top: 1rem;
+    font-size:0.9rem;
+    letter-spacing: 3px;
+    color: rgb(0, 0, 0);
+}
+.proyecto-imagen{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.proyecto-imagen img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.planes {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.planes h2 {
+  font-size: 1.5rem;
+
+  letter-spacing: 3px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.planes p {
+  max-width: 600px;
+  letter-spacing: 1px;
+  margin: 0 auto 40px;
+}
+
+.planes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plan-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.plan-card h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  
+  margin-bottom: 10px;
+}
+
+.plan-card p {
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.plan-card .precio {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.plan-card button{
+    padding: 0.7rem;
+    margin-top: 1rem;
+    width: 120px;
+    text-decoration: none;
+    background-color:#299faf4b;
+    
+    border:none;
+    transition: color 1s ease;
+    
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1rem;
+
+}
+.plan-card a{
+    text-decoration: none;
+    color: #29a0af;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero{
+
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .hero-inner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero img{
+        display: none;
+    }
+    .hero-inner .hero-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-text p{
+        padding: 1.5rem;
+    }
+
+
+
+
+   .informacion-imagen{
+    display: none;
+    flex-direction: column;
+
+   }
+   .informacion{
+    padding: 20px;
+   }
+
+
+   .adicion{
+    flex-direction: column;
+    padding: 60px 20px;
+   }
+ .boxes-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nosotros-item {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .boxes h3 {
+    font-size: 1.6rem;
+  }
+
+  .boxes h4 {
+    font-size: 1.2rem;
+  }
+
+  .boxes p {
+    font-size: 0.9rem;
+  }
+
+  .plan-card {
+    width: 90%;
+  }
+  .proyecto{
+    flex-direction: column;
+
+  }
+
+  .planes{
+    padding: 80px 10px;
+  }
+ 
+  .plan-card{
+  }
+
+
+
+}
