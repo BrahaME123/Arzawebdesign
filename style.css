@@ -502,17 +502,8 @@ header{
     height: 100%;
 }
 
-.footer{ 
-    background:#242424;
-    padding:1rem 0;
-    color:#777777}
-.footer-inner{
-    text-decoration: none;
-     color: white;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem}
+.footer{ background:#242424;padding:1rem 0;color:#777777}
+.footer-inner{text-decoration: none; color: white; display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .footer a{
     text-decoration: none;
     color: white;
@@ -602,9 +593,14 @@ header{
     padding: 80px 10px;
   }
  
-  .plan-card{
+ 
+  .footer-inner {
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
-
+  .footer-inner a{
+    padding: 10px;
+  }
 
 
 }
