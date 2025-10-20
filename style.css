@@ -79,8 +79,8 @@ header{
 }
 
 .brand-thumb{
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     object-fit:cover;
     opacity:0.95
 }
@@ -99,7 +99,6 @@ header{
     text-decoration: none;
     color: var(--color-background);
     font-weight: 300;
-    padding: 1.5rem 0;
     transition: color 0.3s ease;
 
 
