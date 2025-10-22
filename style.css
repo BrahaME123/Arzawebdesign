@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ledger&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
+html{
+  scroll-behavior: smooth;
+}
 :root {
     --color-primary: #30e6ec;
     --color-secondary: #33d8ee;
@@ -65,7 +70,6 @@ body{
 }
 
 header{
-    position: sticky;
     top: 0;
     background-color:#000000;
     z-index: 60;
@@ -79,8 +83,8 @@ header{
 }
 
 .brand-thumb{
-    width:70px;
-    height:70px;
+    width:100%;
+    height:100px;
     object-fit:cover;
     opacity:0.95
 }
@@ -124,10 +128,17 @@ header{
     justify-content:center;
     background-size: cover;
     background-position: center;
+    transition: color 0.5s ease-in;
     background-color: #000000;
+}
+.hero .hero-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
 
 }
-
 .hero-inner{
     display: flex;
     flex-direction: row;
@@ -159,9 +170,9 @@ header{
     margin-top: 1rem;
     width: 120px;
     text-decoration: none;
-    background-color:#299faf4b;
-    
-    border:none;
+    background-color:transparent;
+    border: 1px solid white;
+    border-radius: 5px;
     transition: color 1s ease;
     
     border-radius: 2px;
@@ -172,14 +183,14 @@ header{
 }
 .hero-inner a{
     text-decoration: none;
-    color: #29a0af;
+    color: #ffffff;
     width: 100%;
     height: 100%;
 }
 
 .hero-inner button:hover {
-    background-color: #29a0af;
-    color: white;
+
+  cursor: pointer;
 }
 .hero-inner a:hover{
     color: rgb(0, 0, 0);
@@ -190,8 +201,7 @@ header{
     letter-spacing: 8px;
 }
 .informacion{
-   
-    background-color: black;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +239,7 @@ header{
 }
 
 .adicion{
-    background-color: black;
+    background-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +279,7 @@ header{
 }
 
 .boxes{
-     background-color: #000;
+     background-color: #000000;
   color: white;
   text-align: center;
   padding: 100px 20px; /* Reemplaza height fija */
@@ -282,13 +292,15 @@ header{
 }
 
 .boxes h3{
-    font-size: 1.8rem;
-  font-weight: 300;
+      font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: 3px;
   margin-bottom: 1rem;
 }
 .boxes h4{
    font-weight: 300;
   font-size: 1.3rem;
+  letter-spacing: 2.5px;
   margin-bottom: 0.8rem;
 
 }
@@ -305,7 +317,6 @@ header{
 }
 
 .nosotros-item {
-  background-color: #111;
   border-radius: 8px;
   padding: 2rem;
   flex: 1 1 280px;
@@ -313,10 +324,7 @@ header{
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.nosotros-item:hover {
-  transform: translateY(-5px);
-  background-color: #1a1a1a;
-}
+
 
 
 .nosotros-item p{
@@ -324,7 +332,7 @@ header{
 }
 
 .portfolio{
-    background-color: #ffffff;
+    background-color: #000000;
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -332,10 +340,11 @@ header{
     flex-direction: column;
 }
 .portfolio h3{
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight:200;
-    padding: 3rem;
-    color: #000000;
+    
+    padding: 2.5rem;
+    color: hsl(0, 0%, 100%);
     letter-spacing: 4px;
 }
 .portfolio-grid{
@@ -378,7 +387,7 @@ header{
 
 .proyecto{
    
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -390,10 +399,10 @@ header{
 .proyecto-texto{
     flex: 1;
     padding: 2rem;
-    text-align: center;
 }
 .proyecto-texto h2{
-    color: #000000;
+    color: #fdfdfd;
+    text-align: left;
     text-transform: uppercase;
     font-weight: 200;
     font-size: 1.5rem;
@@ -402,13 +411,14 @@ header{
 .proyecto-texto a{
     text-decoration: none;
     color: #29a0af;
+    border-bottom: 1px solid #29a0af;
 
 }
 .proyecto-texto p{
     margin-top: 1rem;
     font-size:0.9rem;
     letter-spacing: 3px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .proyecto-imagen{
     flex: 1;
@@ -422,13 +432,15 @@ header{
 }
 
 .planes {
-  padding: 60px 20px;
+
   text-align: center;
+ 
+  margin-top: 3rem;
+  padding: 1rem;
 }
 
 .planes h2 {
-  font-size: 1.5rem;
-
+  font-size: 2rem;
   letter-spacing: 3px;
   font-weight: 300;
   margin-bottom: 10px;
@@ -448,17 +460,18 @@ header{
 }
 
 .plan-card {
-  width: 300px;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  height: 500px;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
 
 .plan-card h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  
-  margin-bottom: 10px;
+  margin-bottom: 5rem;
 }
 
 .plan-card p {
@@ -475,7 +488,6 @@ header{
 .plan-card button{
     padding: 0.7rem;
     margin-top: 1rem;
-    width: 120px;
     text-decoration: none;
     background-color:#299faf4b;
     
@@ -520,10 +532,17 @@ header{
         align-items: center;
         overflow: hidden;
     }
+
+    
     .hero-inner{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .hero-inner button{
+      max-width: 100px;
+
     }
     .hero img{
         display: none;
@@ -535,7 +554,7 @@ header{
         justify-content: center;
     }
     .hero-text p{
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
     .adicion-imagen {
         display: none;
@@ -569,7 +588,7 @@ header{
   }
 
   .boxes h3 {
-    font-size: 1.6rem;
+    font-size: 3.5rem;
   }
 
   .boxes h4 {
