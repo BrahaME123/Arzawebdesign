@@ -119,7 +119,6 @@ header{
     cursor: pointer;
 }
 
-/*style="background-image:url('/assets/imgs/ChatGPT\ Image\ 18\ oct\ 2025\,\ 08_57_07\ p.m..png')"   esto en hero puede servir.*/
 .hero{
     height: 100vh;
     display: flex;
@@ -282,13 +281,13 @@ header{
      background-color: #000000;
   color: white;
   text-align: center;
-  padding: 100px 20px; /* Reemplaza height fija */
+  padding: 100px 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  margin-top: 0; /* Evita doble espacio */
+  margin-top: 0; 
 }
 
 .boxes h3{
